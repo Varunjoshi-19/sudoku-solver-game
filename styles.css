@@ -1,0 +1,204 @@
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    user-select: none;
+    width: 100vw;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    background-color: rgb(34, 34, 34);
+}
+
+.container {
+    display: flex;
+
+}
+
+
+div[data-board] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 500px;
+    height: 500px;
+    border: 2px solid white;
+}
+
+.eachSmallBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 3px solid white;
+}
+
+
+div[data-select-numbers] {
+    pointer-events: none;
+}
+
+
+.cell {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+    border: 1px solid rgba(255, 0, 0, 0.45);
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.cell:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.fixedCell {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+    border: 1px solid rgba(255, 0, 0, 0.546);
+    font-size: 2rem;
+    background-color: rgb(183, 183, 255);
+}
+
+
+
+.active {
+    pointer-events: auto;
+}
+
+
+
+.number-button {
+    width: 50px;
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 1.5rem;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(38, 82, 242);
+    transition: background-color 0.3s ease, transform 400ms;
+}
+
+.number-button.buttonScale {
+    transform: scale(1.2);
+}
+
+.number-button:hover {
+    background-color: rgb(89, 117, 220);
+}
+
+
+
+.button-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.board-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-button {
+    display: flex;
+    gap: 10px;
+
+}
+
+.game-button button {
+    padding: 10px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: background-color 400ms;
+}
+
+
+button[data-check] {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: rgb(226, 4, 255);
+}
+
+button[data-check]:hover {
+    background-color: rgba(226, 4, 255, 0.642);
+
+}
+
+button[data-start] {
+    background-color: rgb(88, 255, 4);
+}
+
+button[data-start]:hover {
+    background-color: rgba(88, 255, 4, 0.648);
+}
+
+button[data-reset] {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: rgb(255, 12, 4);
+}
+
+button[data-reset]:hover {
+    background-color: rgba(255, 12, 4, 0.632);
+}
+
+
+button[data-solve] {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: rgb(92, 4, 255);
+}
+
+button[data-solve]:hover {
+    background-color: rgba(92, 4, 255, 0.644);
+}
+
+
+#selectLevel {
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+hr {
+    color: rgba(254, 74, 74, 0.909);
+}
+
+#timer {
+     border: 1px solid red;
+     padding :10px;
+     width: 150px;
+     border-radius: 20px;
+     gap: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer type="module" src="script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="board-container">
+            <h1>SUDOKU SOLVER</h1>
+            <div data-board></div>
+            <div data-select-numbers></div>
+        </div>
+
+        <div class="button-options">
+            <div class="game-button">
+                <button data-start>START</button>
+                <button data-reset>RESET</button>
+                <button data-solve>SOLVE</button>
+                <button data-check>CHECK</button>
+
+            </div>
+            <select name="" id="selectLevel">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+            </select>
+
+
+            <div id="timer">
+                <span>TIMER:</span> <span data-timer> 30:00</span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <audio src="./audio/pick.mp3"></audio>
+    <audio src="./audio/put-sound.mp3"></audio>
+    <audio src="./audio/err.mp3"></audio>
+
+
+
+
+</body>
+
+</html>
