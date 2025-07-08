@@ -47,6 +47,7 @@ resetButton.addEventListener("click", () => {
 
 solveButton.addEventListener("click", () => {
     if (gameStarted) {
+        timer.textContent = "00:00";
         solveSudoku();
         solveButton.disabled = true;
         solveButton.style.opacity = 0.5;
@@ -157,8 +158,8 @@ function clearBoard() {
 }
 
 function resetGame() {
-
     stopTimer(timer);
+    timer.textContent = "30:00";
     clearBoard();
     disableEverything();
 
@@ -227,7 +228,7 @@ function gameOver() {
 
 
 function startGame() {
-    startTimer(timer);
+    startTimer(timer , resetGame);
     generateRandomBoardValues();
 
     gameStarted = true;
@@ -266,7 +267,7 @@ function startGame() {
 function solveSudoku() {
 
     clearDom();
-
+    stopTimer();
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
 
