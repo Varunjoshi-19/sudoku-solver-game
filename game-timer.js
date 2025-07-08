@@ -1,4 +1,4 @@
-const TIME = 10 * 1000; // 30 MINS
+const TIME = 30 * 60 * 1000; // 30 MINS
 let timeoutId = null;
 let intervalId = null;
 let currentTime = TIME;
